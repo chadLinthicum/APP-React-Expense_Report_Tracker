@@ -1,6 +1,6 @@
 import React from "react";
 
-const TableHeader = () => {
+const tableHeader = () => {
   return (
     <thead>
       <tr>
@@ -11,36 +11,30 @@ const TableHeader = () => {
   );
 };
 
-const TableBody = () => {
-  return (
-    <tbody>
-      <tr>
-        <td>Chad</td>
-        <td>Linthicum</td>
-      </tr>
-      <tr>
-        <td>Emily</td>
-        <td>Cullen</td>
-      </tr>
-      <tr>
-        <td>Erica</td>
-        <td>Linthicum</td>
-      </tr>
-      <tr>
-        <td>James</td>
-        <td>Cullen</td>
-      </tr>
-    </tbody>
-  );
+const tableBody = () => {
+  const persons = [
+    {
+      name: "Chad",
+      job: "Software Dev",
+    },
+    {
+      name: "Emily",
+      job: "Vet Assistant",
+    },
+    {
+      name: "Erica",
+      job: "Teacher",
+    },
+    {
+      name: "James",
+      job: "Salesman",
+    },
+  ];
+  return <tbody>{persons.job}</tbody>;
 };
 
-function Table() {
-  return (
-    <table>
-      <TableHeader />
-      <TableBody />
-    </table>
-  );
-}
+const Table = () => {
+  <tableBody />;
+};
 
 export default Table;
