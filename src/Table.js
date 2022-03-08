@@ -1,17 +1,6 @@
 import React from "react";
 
-const tableHeader = () => {
-  return (
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Job</th>
-      </tr>
-    </thead>
-  );
-};
-
-const tableBody = () => {
+const Table = () => {
   const persons = [
     {
       name: "Chad",
@@ -30,11 +19,22 @@ const tableBody = () => {
       job: "Salesman",
     },
   ];
-  return <tbody>{persons.job}</tbody>;
-};
-
-const Table = () => {
-  <tableBody />;
+  return <div>{persons}</div>;
 };
 
 export default Table;
+
+// const TableHeader = () => {
+//   return (
+//     <thead>
+//       <tr>
+//         <th>Name</th>
+//         <th>Job</th>
+//       </tr>
+//     </thead>
+//   );
+// };
+
+// const TableBody = () => {
+//   return <tbody>{persons.job}</tbody>;
+// };
