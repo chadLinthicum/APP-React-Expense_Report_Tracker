@@ -26,9 +26,9 @@ table {
   display: inline-block;
 }
 
-th {
-  padding-left: 100px;
-  padding-right: 100px;
+.expense-table {
+  padding-left: 90px;
+  padding-right: 90px;
 }
 
 .erase-button {
