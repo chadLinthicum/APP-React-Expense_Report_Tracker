@@ -1,8 +1,8 @@
 import React from "react";
 
 const Table = ({ characterProps }) => {
-  function alert() {
-    console.log("Test");
+  function alertMe() {
+    alert("Test");
   }
 
   return (
@@ -24,7 +24,7 @@ const Table = ({ characterProps }) => {
             return (
               <tr key={character.id}>
                 <td>
-                  <button className="erase-button" onClick={alert()}>
+                  <button className="erase-button" onClick={alertMe()}>
                     {character.erase}
                   </button>
                 </td>
