@@ -1,17 +1,13 @@
 import React from "react";
 
 const Table = ({ characterProps }) => {
-  function alertMe() {
-    alert("Test");
-  }
-
   return (
     <div>
       <br />
       <table>
         <thead>
           <tr>
-            <th className="erase-button-header"></th>
+            <th className="expense-table"></th>
             <th className="expense-table">Date</th>
             <th className="expense-table">Item</th>
             <th className="expense-table">Amount</th>
@@ -24,9 +20,7 @@ const Table = ({ characterProps }) => {
             return (
               <tr key={character.id}>
                 <td>
-                  <button className="erase-button" onClick={alertMe()}>
-                    {character.erase}
-                  </button>
+                  <button className="erase-button">X</button>
                 </td>
                 <td>{character.date}</td>
                 <td>{character.item}</td>

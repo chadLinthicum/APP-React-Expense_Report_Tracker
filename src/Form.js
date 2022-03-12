@@ -7,7 +7,6 @@ const Form = () => {
   const [item, setItem] = useState("");
   const [amount, setAmount] = useState("");
   const [where, setWhere] = useState("");
-  const [erase, setErase] = useState("X");
 
   const character = {
     id: Math.round(Date.now() / 1000),
@@ -15,7 +14,6 @@ const Form = () => {
     item: item,
     amount: amount,
     where: where,
-    erase: erase,
   };
 
   function handleSubmit(e) {
@@ -54,7 +52,9 @@ const Form = () => {
             value={where}
           />
           <br />
-          <input type="submit" />
+          <button className="submit-button" onClick={handleSubmit}>
+            Submit
+          </button>
         </form>
         <Table characterProps={characterData} />
       </div>
