@@ -20,7 +20,9 @@ const Table = ({ props }) => {
             return (
               <tr key={character.id}>
                 <td>
-                  <button className="erase-button">x</button>
+                  <button className="erase-button" onClick={alert("test")}>
+                    x
+                  </button>
                 </td>
                 <td>{character.date}</td>
                 <td>{character.item}</td>
