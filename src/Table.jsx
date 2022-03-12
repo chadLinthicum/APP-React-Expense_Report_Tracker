@@ -1,6 +1,6 @@
 import React from "react";
 
-const Table = ({ characterProps }) => {
+const Table = ({ props }) => {
   return (
     <div>
       <br />
@@ -15,12 +15,12 @@ const Table = ({ characterProps }) => {
           </tr>
         </thead>
         <tbody>
-          {characterProps.map((character) => {
+          {props.map((character) => {
             //character can be named whatever
             return (
               <tr key={character.id}>
                 <td>
-                  <button className="erase-button">X</button>
+                  <button className="erase-button">x</button>
                 </td>
                 <td>{character.date}</td>
                 <td>{character.item}</td>

@@ -25,6 +25,7 @@ input {
 
 table {
   display: inline-block;
+  border: black;
 }
 
 .expense-table {

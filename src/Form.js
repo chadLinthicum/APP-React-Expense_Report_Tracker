@@ -52,11 +52,12 @@ const Form = () => {
             value={where}
           />
           <br />
-          <button className="submit-button" onClick={handleSubmit}>
+          <br />
+          <button type="submit" className="submit-button">
             Submit
           </button>
         </form>
-        <Table characterProps={characterData} />
+        <Table props={characterData} />
       </div>
     </div>
   );
