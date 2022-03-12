@@ -7,6 +7,7 @@ const Table = ({ characterProps }) => {
       <table>
         <thead>
           <tr>
+            <th></th>
             <th>Date</th>
             <th>Item</th>
             <th>Amount</th>
@@ -18,6 +19,9 @@ const Table = ({ characterProps }) => {
             //character can be named whatever
             return (
               <tr key={character.id}>
+                <td>
+                  <button className="erase-button">{character.erase}</button>
+                </td>
                 <td>{character.date}</td>
                 <td>{character.item}</td>
                 <td>${character.amount}</td>

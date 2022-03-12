@@ -7,6 +7,7 @@ const Form = () => {
   const [item, setItem] = useState("");
   const [amount, setAmount] = useState("");
   const [where, setWhere] = useState("");
+  const [erase, setErase] = useState("X");
 
   const character = {
     id: Math.round(Date.now() / 1000),
@@ -14,11 +15,12 @@ const Form = () => {
     item: item,
     amount: amount,
     where: where,
+    erase: erase,
   };
 
   function handleSubmit(e) {
     e.preventDefault();
-    setCharacterData([...characterData, character]); //spread operator
+    setCharacterData([...characterData, character]);
   }
 
   return (

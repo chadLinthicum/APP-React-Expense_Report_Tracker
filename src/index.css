@@ -30,3 +30,9 @@ th {
   padding-left: 100px;
   padding-right: 100px;
 }
+
+.erase-button {
+  background-color: red;
+  border-radius: 50%;
+  font-weight: bold;
+}
