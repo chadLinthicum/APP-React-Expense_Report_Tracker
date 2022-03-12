@@ -5,8 +5,9 @@ const Table = ({ characterProps }) => {
     <table>
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Job</th>
+          <th>Date</th>
+          <th>Item</th>
+          <th>Amount</th>
         </tr>
       </thead>
       <tbody>
@@ -14,8 +15,9 @@ const Table = ({ characterProps }) => {
           //character can be named whatever
           return (
             <tr key={character.id}>
-              <td>{character.name}</td>
-              <td>{character.job}</td>
+              <td>{character.date}</td>
+              <td>{character.item}</td>
+              <td>${character.amount}</td>
             </tr>
           );
         })}

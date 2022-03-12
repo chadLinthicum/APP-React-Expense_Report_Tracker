@@ -2,37 +2,16 @@ import React, { useState } from "react";
 import Table from "./Table";
 
 function App() {
-  const characters = [
-    {
-      id: "001",
-      name: "Charlie",
-      job: "Janitor",
-    },
-    {
-      id: "002",
-      name: "Mac",
-      job: "Bouncer",
-    },
-    {
-      id: "003",
-      name: "Dee",
-      job: "Aspring actress",
-    },
-    {
-      id: "004",
-      name: "Dennis",
-      job: "Bartender",
-    },
-  ];
-
   const [characterData, setCharacterData] = useState([]);
-  const [name, setName] = useState("");
-  const [job, setJob] = useState("");
+  const [date, setDate] = useState("");
+  const [item, setItem] = useState("");
+  const [amount, setAmount] = useState("");
 
   const character = {
-    id: Math.floor(Math.random() * 1000),
-    name: name,
-    job: job,
+    id: Math.round(Date.now() / 1000),
+    date: date,
+    item: item,
+    amount: amount,
   };
 
   function handleSubmit(e) {
@@ -41,25 +20,33 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <form onSubmit={handleSubmit}>
-        {" "}
-        Name
-        <input
-          type="text"
-          onChange={(e) => setName(e.target.value)}
-          value={name}
-        />
-        Job
-        <input
-          type="text"
-          onChange={(e) => setJob(e.target.value)}
-          value={job}
-        />
-        <br />
-        <input type="submit" />
-      </form>
-      <Table characterProps={characterData} />
+    <div>
+      <h1>Expense Tracker</h1>
+      <div className="container">
+        <form onSubmit={handleSubmit}>
+          Date
+          <input
+            type="date"
+            onChange={(e) => setDate(e.target.value)}
+            value={date}
+          />
+          Item
+          <input
+            type="text"
+            onChange={(e) => setItem(e.target.value)}
+            value={item}
+          />
+          Amount
+          <input
+            type="number"
+            onChange={(e) => setAmount(e.target.value)}
+            value={amount}
+          />
+          <br />
+          <input type="submit" />
+        </form>
+        <Table characterProps={characterData} />
+      </div>
     </div>
   );
 }
