@@ -6,12 +6,14 @@ const Form = () => {
   const [date, setDate] = useState("");
   const [item, setItem] = useState("");
   const [amount, setAmount] = useState("");
+  const [where, setWhere] = useState("");
 
   const character = {
     id: Math.round(Date.now() / 1000),
     date: date,
     item: item,
     amount: amount,
+    where: where,
   };
 
   function handleSubmit(e) {
@@ -42,6 +44,12 @@ const Form = () => {
             type="number"
             onChange={(e) => setAmount(e.target.value)}
             value={amount}
+          />
+          Where
+          <input
+            type="text"
+            onChange={(e) => setWhere(e.target.value)}
+            value={where}
           />
           <br />
           <input type="submit" />

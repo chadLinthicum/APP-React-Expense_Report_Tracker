@@ -2,7 +2,7 @@ import React from "react";
 
 const Table = ({ characterProps }) => {
   return (
-    <div className="Table">
+    <div>
       <br />
       <table>
         <thead>
@@ -10,6 +10,7 @@ const Table = ({ characterProps }) => {
             <th>Date</th>
             <th>Item</th>
             <th>Amount</th>
+            <th>Where</th>
           </tr>
         </thead>
         <tbody>
@@ -20,6 +21,7 @@ const Table = ({ characterProps }) => {
                 <td>{character.date}</td>
                 <td>{character.item}</td>
                 <td>${character.amount}</td>
+                <td>{character.where}</td>
               </tr>
             );
           })}

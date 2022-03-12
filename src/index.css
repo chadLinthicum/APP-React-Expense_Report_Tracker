@@ -22,7 +22,7 @@ input {
   max-width: 10%;
 }
 
-.Table {
+table {
   display: inline-block;
 }
 
