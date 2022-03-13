@@ -63,7 +63,7 @@ const Form = () => {
               type="text"
               onChange={(e) => setItem(e.target.value)}
               value={item}
-              placeholder="What did you?"
+              placeholder="What did you buy?"
             />
           </div>
           <div className="form-field">
