@@ -23,7 +23,7 @@ const Table = ({ props }) => {
                   <button
                     className="erase-button"
                     type="button"
-                    onClick={alert("hi")}
+                    onClick={() => alert("test")}
                   >
                     x
                   </button>

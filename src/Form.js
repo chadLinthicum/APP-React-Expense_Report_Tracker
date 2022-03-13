@@ -16,10 +16,10 @@ const Form = () => {
     where: where,
   };
 
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setCharacterData([...characterData, character]);
-  }
+  };
 
   return (
     <div>

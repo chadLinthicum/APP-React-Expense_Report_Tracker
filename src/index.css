@@ -43,11 +43,33 @@ table {
   box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.2);
 }
 
+.erase-button:hover {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  color: red;
+  border-radius: 30%;
+  font-size: 12pt;
+  font-weight: bold;
+  box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.2);
+}
+
 .submit-button {
   border: 1px solid rgba(5, 129, 0, 1);
   border-radius: 4px;
   background: rgba(5, 129, 0, 1);
   color: #ffffff;
+  font-weight: bold;
+  font-size: 12pt;
+  padding: 14px 12px;
+  line-height: 0.5;
+  box-shadow: 0 10px 10px -2px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button:hover {
+  border: 1px solid rgba(5, 129, 0, 1);
+  border-radius: 4px;
+  background: #ffffff;
+  color: rgba(5, 129, 0, 1);
   font-weight: bold;
   font-size: 12pt;
   padding: 14px 12px;
