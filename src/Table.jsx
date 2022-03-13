@@ -7,12 +7,12 @@ const Table = ({ props }) => {
       <table>
         <thead>
           <tr>
-            <th className="expense-table">Date</th>
-            <th className="expense-table">Where</th>
-            <th className="expense-table">Payment</th>
-            <th className="expense-table">Item</th>
-            <th className="expense-table">Amount</th>
-            <th className="expense-table">---</th>
+            <th>Date</th>
+            <th>Where</th>
+            <th>Payment</th>
+            <th>Item</th>
+            <th>Amount</th>
+            <th>---</th>
           </tr>
         </thead>
         <tbody>

@@ -7,7 +7,7 @@ body {
   text-align: center;
 }
 
-.navbar {
+nav {
   box-shadow: 0 10px 10px -2px rgba(0, 0, 0, 0.2);
   background: linear-gradient(
     90deg,
@@ -17,33 +17,36 @@ body {
   padding-bottom: 1px;
 }
 
-input {
-  margin: 10px;
-  box-shadow: 0 10px 10px -2px rgba(0, 0, 0, 0.2);
-}
-
-select {
-  margin: 10px;
-  min-width: 170px;
-  box-shadow: 0 10px 10px -2px rgba(0, 0, 0, 0.2);
-}
-
 table {
-  display: inline-block;
+  display: inline;
   border-collapse: collapse;
 }
 
 th {
   border: 2px solid;
+  max-width: 70px;
+  padding-left: 90px;
+  padding-right: 90px;
 }
 
 tr td {
   border-bottom: 1px solid #000000;
 }
 
-.expense-table {
-  padding-left: 90px;
-  padding-right: 90px;
+input {
+  min-width: 150px;
+  margin: 10px;
+  box-shadow: 0 10px 10px -2px rgba(0, 0, 0, 0.2);
+}
+
+select {
+  margin: 10px;
+  min-width: 175px;
+  box-shadow: 0 10px 10px -2px rgba(0, 0, 0, 0.2);
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  border-right: 2px solid #767676;
+  border-bottom: 2px solid #767676;
 }
 
 .erase-button {
@@ -58,8 +61,8 @@ tr td {
 
 .erase-button:hover {
   background-color: rgb(255, 255, 255);
-  border: 1px solid black;
-  color: red;
+  border: 1px solid rgb(255, 0, 0);
+  color: rgb(0, 0, 0);
   border-radius: 30%;
   font-size: 12pt;
   font-weight: bold;
@@ -90,7 +93,7 @@ tr td {
   box-shadow: 0 10px 10px -2px rgba(0, 0, 0, 0.2);
 }
 
-.field {
+.form-field {
   display: inline-flex;
   align-items: center;
 }

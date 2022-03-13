@@ -28,7 +28,7 @@ const Form = () => {
       <br />
       <div className="container">
         <form onSubmit={handleSubmit}>
-          <div className="field">
+          <div className="form-field">
             Date
             <input
               type="date"
@@ -36,7 +36,7 @@ const Form = () => {
               value={date}
             />
           </div>
-          <div className="field">
+          <div className="form-field">
             Where
             <input
               type="text"
@@ -45,7 +45,7 @@ const Form = () => {
               placeholder="Where did you buy it?"
             />
           </div>
-          <div className="field">
+          <div className="form-field">
             Payment
             <select>
               <option
@@ -56,7 +56,7 @@ const Form = () => {
               </option>
             </select>
           </div>
-          <div className="field">
+          <div className="form-field">
             Item
             {}
             <input
@@ -66,7 +66,7 @@ const Form = () => {
               placeholder="What did you?"
             />
           </div>
-          <div className="field">
+          <div className="form-field">
             Amount
             <input
               type="number"
@@ -81,6 +81,7 @@ const Form = () => {
             Submit
           </button>
         </form>
+        <br />
         <Table props={characterData} />
       </div>
     </div>

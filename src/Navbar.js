@@ -4,7 +4,7 @@ import stockImage from "./stockImage.png";
 const Navbar = () => {
   return (
     <div>
-      <nav className="navbar">
+      <nav>
         <img src={stockImage} width="75" alt="" />
         <h1>Expense Tracker</h1>
       </nav>
