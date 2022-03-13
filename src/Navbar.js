@@ -6,7 +6,7 @@ const Navbar = () => {
     <div>
       <nav className="navbar">
         <img src={stockImage} width="75" alt="" />
-        <h1>Expense Report Tracker</h1>
+        <h1>Expense Tracker</h1>
       </nav>
     </div>
   );

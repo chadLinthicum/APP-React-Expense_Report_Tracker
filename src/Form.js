@@ -43,7 +43,7 @@ const Form = () => {
           <input
             type="number"
             onChange={(e) => setAmount(e.target.value)}
-            value={amount}
+            value={character.amount}
           />
           Where
           <input
