@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Form from "./Form";
+import Navbar from "./components/Navbar";
+import Form from "./components/Form";
 
 function App() {
   return (
