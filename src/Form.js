@@ -4,16 +4,18 @@ import Table from "./Table";
 const Form = () => {
   const [characterData, setCharacterData] = useState([]);
   const [date, setDate] = useState("");
-  const [item, setItem] = useState("");
-  const [amount, setAmount] = useState("");
   const [where, setWhere] = useState("");
+  const [item, setItem] = useState("");
+  const [payment, setPayment] = useState("");
+  const [amount, setAmount] = useState("");
 
   const character = {
     id: Math.round(Date.now() / 1000),
     date: date,
+    where: where,
+    payment: payment,
     item: item,
     amount: amount,
-    where: where,
   };
 
   const handleSubmit = (e) => {
@@ -26,31 +28,53 @@ const Form = () => {
       <br />
       <div className="container">
         <form onSubmit={handleSubmit}>
-          Date
-          <input
-            type="date"
-            onChange={(e) => setDate(e.target.value)}
-            value={date}
-          />
-          Item
-          {}
-          <input
-            type="text"
-            onChange={(e) => setItem(e.target.value)}
-            value={item}
-          />
-          Amount
-          <input
-            type="number"
-            onChange={(e) => setAmount(e.target.value)}
-            value={character.amount}
-          />
-          Where
-          <input
-            type="text"
-            onChange={(e) => setWhere(e.target.value)}
-            value={where}
-          />
+          <div className="field">
+            Date
+            <input
+              type="date"
+              onChange={(e) => setDate(e.target.value)}
+              value={date}
+            />
+          </div>
+          <div className="field">
+            Where
+            <input
+              type="text"
+              onChange={(e) => setWhere(e.target.value)}
+              value={where}
+              placeholder="Where did you buy it?"
+            />
+          </div>
+          <div className="field">
+            Payment
+            <select>
+              <option
+                onChange={(e) => setPayment(e.target.value)}
+                value={payment}
+              >
+                Select payment type...
+              </option>
+            </select>
+          </div>
+          <div className="field">
+            Item
+            {}
+            <input
+              type="text"
+              onChange={(e) => setItem(e.target.value)}
+              value={item}
+              placeholder="What did you?"
+            />
+          </div>
+          <div className="field">
+            Amount
+            <input
+              type="number"
+              onChange={(e) => setAmount(e.target.value)}
+              value={character.amount}
+              placeholder="How much did it cost?"
+            />
+          </div>
           <br />
           <br />
           <button type="submit" className="submit-button">

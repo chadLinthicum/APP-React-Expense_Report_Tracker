@@ -7,11 +7,12 @@ const Table = ({ props }) => {
       <table>
         <thead>
           <tr>
-            <th className="expense-table"></th>
             <th className="expense-table">Date</th>
+            <th className="expense-table">Where</th>
+            <th className="expense-table">Payment</th>
             <th className="expense-table">Item</th>
             <th className="expense-table">Amount</th>
-            <th className="expense-table">Where</th>
+            <th className="expense-table">---</th>
           </tr>
         </thead>
         <tbody>
@@ -19,6 +20,11 @@ const Table = ({ props }) => {
             //character can be named whatever
             return (
               <tr key={character.id}>
+                <td>{character.date}</td>
+                <td>{character.where}</td>
+                <td>{character.payment}</td>
+                <td>{character.item}</td>
+                <td>${character.amount}</td>
                 <td>
                   <button
                     className="erase-button"
@@ -28,10 +34,6 @@ const Table = ({ props }) => {
                     x
                   </button>
                 </td>
-                <td>{character.date}</td>
-                <td>{character.item}</td>
-                <td>${character.amount}</td>
-                <td>{character.where}</td>
               </tr>
             );
           })}

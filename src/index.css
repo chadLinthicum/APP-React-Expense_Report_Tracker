@@ -19,13 +19,26 @@ body {
 
 input {
   margin: 10px;
-  max-width: 10%;
+  box-shadow: 0 10px 10px -2px rgba(0, 0, 0, 0.2);
+}
+
+select {
+  margin: 10px;
+  min-width: 170px;
   box-shadow: 0 10px 10px -2px rgba(0, 0, 0, 0.2);
 }
 
 table {
   display: inline-block;
-  border: black;
+  border-collapse: collapse;
+}
+
+th {
+  border: 2px solid;
+}
+
+tr td {
+  border-bottom: 1px solid #000000;
 }
 
 .expense-table {
@@ -75,4 +88,9 @@ table {
   padding: 14px 12px;
   line-height: 0.5;
   box-shadow: 0 10px 10px -2px rgba(0, 0, 0, 0.2);
+}
+
+.field {
+  display: inline-flex;
+  align-items: center;
 }
