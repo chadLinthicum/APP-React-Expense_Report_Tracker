@@ -10,7 +10,7 @@ const Form = () => {
   const [amount, setAmount] = useState("");
 
   const character = {
-    id: Math.round(Date.now() / 1000),
+    id: Math.round(Date.now() / 10000),
     date: date,
     where: where,
     payment: payment,
