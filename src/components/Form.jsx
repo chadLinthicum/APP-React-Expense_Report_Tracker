@@ -2,25 +2,27 @@ import React, { useState } from "react";
 import Table from "./Table";
 
 const Form = () => {
-  const [characterData, setCharacterData] = useState([]);
+  const [expenseArray, setExpenseArray] = useState([]);
   const [date, setDate] = useState("");
   const [where, setWhere] = useState("");
   const [item, setItem] = useState("");
   const [payment, setPayment] = useState("");
   const [amount, setAmount] = useState("");
 
-  const character = {
-    id: Math.round(Date.now() / 10000),
+  const newExpense = {
+    id: Math.round(Date.now() / 1000),
     date: date,
     where: where,
     payment: payment,
     item: item,
     amount: amount,
+    done: true,
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setCharacterData([...characterData, character]);
+    setExpenseArray([...expenseArray, newExpense]); //pushes character object into characterData array
+    // console.log("CD = ", expenseData);
   };
 
   return (
@@ -71,7 +73,7 @@ const Form = () => {
             <input
               type="number"
               onChange={(e) => setAmount(e.target.value)}
-              value={character.amount}
+              value={newExpense.amount}
               placeholder="How much did it cost?"
             />
           </div>
@@ -82,7 +84,7 @@ const Form = () => {
           </button>
         </form>
         <br />
-        <Table props={characterData} />
+        <Table expenseArray={expenseArray} setExpenseArray={setExpenseArray} />
       </div>
     </div>
   );

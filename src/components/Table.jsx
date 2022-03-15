@@ -1,6 +1,18 @@
 import React from "react";
 
-const Table = ({ props }) => {
+const Table = ({ expenseArray, setExpenseArray }) => {
+  const removeExpense = (e, id) => {
+    e.preventDefault();
+    const expenseNotToBeDeleted = expenseArray.filter(
+      (expense) => !(expense.id === id && expense.done)
+    );
+
+    setExpenseArray(expenseNotToBeDeleted);
+    console.log(expenseNotToBeDeleted);
+  };
+
+  // console.log(expenseArray);
+
   return (
     <div className="table-expenses">
       <br />
@@ -16,20 +28,20 @@ const Table = ({ props }) => {
           </tr>
         </thead>
         <tbody>
-          {props.map((character) => {
+          {expenseArray.map((expense) => {
             //character can be named whatever
             return (
-              <tr key={character.id}>
-                <td>{character.date}</td>
-                <td>{character.where}</td>
-                <td>{character.payment}</td>
-                <td>{character.item}</td>
-                <td>${character.amount}</td>
+              <tr key={expense.id}>
+                <td>{expense.date}</td>
+                <td>{expense.where}</td>
+                <td>{expense.payment}</td>
+                <td>{expense.item}</td>
+                <td>${expense.amount}</td>
                 <td>
                   <button
                     className="erase-button"
                     type="button"
-                    onClick={() => alert("test")}
+                    onClick={(e) => removeExpense(e, expense.id)}
                   >
                     x
                   </button>
