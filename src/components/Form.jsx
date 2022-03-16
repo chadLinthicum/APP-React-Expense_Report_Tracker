@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Table from "./Table";
+import uuid from "react-uuid";
 
 const Form = () => {
   const [expenseArray, setExpenseArray] = useState([]);
@@ -10,7 +11,7 @@ const Form = () => {
   const [amount, setAmount] = useState("");
 
   const newExpense = {
-    id: Math.round(Date.now() / 1000),
+    id: uuid(),
     date: date,
     where: where,
     payment: payment,
@@ -22,7 +23,6 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setExpenseArray([...expenseArray, newExpense]); //pushes character object into characterData array
-    // console.log("CD = ", expenseData);
   };
 
   return (

@@ -3,12 +3,12 @@ import React from "react";
 const Table = ({ expenseArray, setExpenseArray }) => {
   const removeExpense = (e, id) => {
     e.preventDefault();
-    const expenseNotToBeDeleted = expenseArray.filter(
+    const expenseToBeDeleted = expenseArray.filter(
       (expense) => !(expense.id === id && expense.done)
     );
 
-    setExpenseArray(expenseNotToBeDeleted);
-    console.log(expenseNotToBeDeleted);
+    setExpenseArray(expenseToBeDeleted);
+    console.log(expenseToBeDeleted);
   };
 
   // console.log(expenseArray);
