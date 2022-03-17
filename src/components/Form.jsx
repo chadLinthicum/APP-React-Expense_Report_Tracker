@@ -3,6 +3,13 @@ import Table from "./Table";
 import uuid from "react-uuid";
 
 const Form = () => {
+  window.onload = function () {
+    let localStorageExpense = JSON.parse(localStorage.getItem("expense"));
+    if (window.localStorage.length > 0) {
+      return setExpenseArray([...expenseArray, localStorageExpense]);
+    }
+  };
+
   const [expenseArray, setExpenseArray] = useState([]);
   const [date, setDate] = useState("");
   const [where, setWhere] = useState("");
@@ -17,12 +24,12 @@ const Form = () => {
     payment: payment,
     item: item,
     amount: amount,
-    done: true,
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setExpenseArray([...expenseArray, newExpense]); //pushes character object into characterData array
+    localStorage.setItem("expense", JSON.stringify(newExpense));
   };
 
   return (
