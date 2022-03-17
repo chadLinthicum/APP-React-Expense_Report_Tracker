@@ -4,11 +4,16 @@ import uuid from "react-uuid";
 
 const Form = () => {
   window.onload = function () {
-    let localStorageExpense = JSON.parse(localStorage.getItem("expense"));
-    if (window.localStorage.length > 0) {
-      return setExpenseArray([...expenseArray, localStorageExpense]);
-    }
+    // let localStorageExpense = JSON.parse(localStorage.getItem("expense"));
+    // if (window.localStorage.length > 0) {
+    //   return setExpenseArray([...expenseArray, localStorageExpense]);
+    // }
+    console.table(window.localStorage);
   };
+
+  //set local storage to be an array
+  //function that will set local storage to an array
+  //when asks for expenses key, return an array
 
   const [expenseArray, setExpenseArray] = useState([]);
   const [date, setDate] = useState("");
@@ -28,7 +33,8 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setExpenseArray([...expenseArray, newExpense]); //pushes character object into characterData array
+    //pushes character object into characterData array
+    setExpenseArray([...expenseArray, newExpense]);
     localStorage.setItem("expense", JSON.stringify(newExpense));
   };
 
@@ -56,13 +62,9 @@ const Form = () => {
           </div>
           <div className="form-field">
             Payment
-            <select>
-              <option
-                onChange={(e) => setPayment(e.target.value)}
-                value={payment}
-              >
-                Select payment type...
-              </option>
+            <select onChange={(e) => setPayment(e.target.value)}>
+              <option value="">Select payment type...</option>
+              <option value="Cash">Cash</option>
             </select>
           </div>
           <div className="form-field">
@@ -98,3 +100,14 @@ const Form = () => {
 };
 
 export default Form;
+
+// if (
+//   !paymentType.value ||
+//   !purchase.value ||
+//   !date.value ||
+//   !amount.value ||
+//   !location.value
+//   ) {
+//   alert('Please fill out fields before submitting.');
+//   return;
+// }

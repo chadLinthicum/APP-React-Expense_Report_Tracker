@@ -3,8 +3,9 @@ import React from "react";
 const Table = ({ expenseArray, setExpenseArray }) => {
   const removeExpense = (e, id) => {
     e.preventDefault();
+    //redraws all expenses that do match the ID of the ones being deleted
     const expensesNotToBeDeleted = expenseArray.filter(
-      (expense) => !(expense.id === id) //redraws all expenses that do match the ID of the ones being deleted
+      (expense) => !(expense.id === id)
     );
     setExpenseArray(expensesNotToBeDeleted);
   };
@@ -26,8 +27,8 @@ const Table = ({ expenseArray, setExpenseArray }) => {
           </tr>
         </thead>
         <tbody>
+          {/* expense can be named whatever */}
           {expenseArray.map((expense) => {
-            //expense can be named whatever
             return (
               <tr key={expense.id}>
                 <td>{expense.date}</td>
