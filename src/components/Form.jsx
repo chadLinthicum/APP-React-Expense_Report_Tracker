@@ -1,26 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Table from "./Table";
 import uuid from "react-uuid";
 
 const Form = () => {
-  window.onload = function () {
-    // let localStorageExpense = JSON.parse(localStorage.getItem("expense"));
-    // if (window.localStorage.length > 0) {
-    //   return setExpenseArray([...expenseArray, localStorageExpense]);
-    // }
-    console.table(window.localStorage);
-  };
-
-  //set local storage to be an array
-  //function that will set local storage to an array
-  //when asks for expenses key, return an array
-
-  const [expenseArray, setExpenseArray] = useState([]);
+  const [expenseArray, setExpenseArray] = useState(
+    JSON.parse(localStorage.getItem("expense")) || []
+  );
+  //Default value of expenseArray is the array of local storage OR an empty array
   const [date, setDate] = useState("");
   const [where, setWhere] = useState("");
   const [item, setItem] = useState("");
   const [payment, setPayment] = useState("");
   const [amount, setAmount] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("expense", JSON.stringify(expenseArray));
+  }, [expenseArray]);
+  //Watches expenseArray and updates expenseArray whenever it changes. This also handles the side-effect of when expense are deleted.
 
   const newExpense = {
     id: uuid(),
@@ -33,9 +29,8 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    //pushes character object into characterData array
-    setExpenseArray([...expenseArray, newExpense]);
-    localStorage.setItem("expense", JSON.stringify(newExpense));
+    setExpenseArray((previous) => [...previous, newExpense]);
+    //Pushes character object into characterData array
   };
 
   return (
@@ -100,14 +95,3 @@ const Form = () => {
 };
 
 export default Form;
-
-// if (
-//   !paymentType.value ||
-//   !purchase.value ||
-//   !date.value ||
-//   !amount.value ||
-//   !location.value
-//   ) {
-//   alert('Please fill out fields before submitting.');
-//   return;
-// }
