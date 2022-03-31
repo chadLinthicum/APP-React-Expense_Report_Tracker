@@ -1,5 +1,5 @@
 <p align="center">
- <b>Description:</b>An app designed to track of your finances!<br>
+ <b>Description:</b> An app designed to track of your finances!<br>
  <br>
  <b>View In Browser: </b><a href="https://chadlinthicum.github.io/APP_React_Grilled-Cheese-Channel/"> Here</a><br>
  <br>
