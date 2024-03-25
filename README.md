@@ -1,7 +1,7 @@
 <p align="center">
  <b>Description:</b> An app designed to track of your finances!!<br>
  <br>
- <b>View In Browser: </b><a href="https://chadLinthicum.github.io/APP-React_Expense-Tracker"> Here</a><br>
+ <b>View In Browser: </b><a href="https://chadlinthicum.github.io/APP-React-Expense_Report_Tracker/"> Here</a><br>
  <br>
  <b>Download: </b><a href="https://github.com/chadLinthicum/APP-React_Expense-Tracker">Here</a><br>
  <br>
