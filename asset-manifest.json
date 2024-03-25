@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/APP-React_Expense-Tracker/static/css/main.9dac445e.css",
-    "main.js": "/APP-React_Expense-Tracker/static/js/main.f5398e8a.js",
-    "static/js/787.28cb0dcd.chunk.js": "/APP-React_Expense-Tracker/static/js/787.28cb0dcd.chunk.js",
-    "static/media/stockImage.png": "/APP-React_Expense-Tracker/static/media/stockImage.9c960e3fc4365b7a14f5.png",
-    "index.html": "/APP-React_Expense-Tracker/index.html",
-    "main.9dac445e.css.map": "/APP-React_Expense-Tracker/static/css/main.9dac445e.css.map",
-    "main.f5398e8a.js.map": "/APP-React_Expense-Tracker/static/js/main.f5398e8a.js.map",
-    "787.28cb0dcd.chunk.js.map": "/APP-React_Expense-Tracker/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/chadLinthicum/APP-React-Expense_Report_Tracker/static/css/main.9dac445e.css",
+    "main.js": "/chadLinthicum/APP-React-Expense_Report_Tracker/static/js/main.c1ccf1b2.js",
+    "static/js/787.28cb0dcd.chunk.js": "/chadLinthicum/APP-React-Expense_Report_Tracker/static/js/787.28cb0dcd.chunk.js",
+    "static/media/stockImage.png": "/chadLinthicum/APP-React-Expense_Report_Tracker/static/media/stockImage.9c960e3fc4365b7a14f5.png",
+    "index.html": "/chadLinthicum/APP-React-Expense_Report_Tracker/index.html",
+    "main.9dac445e.css.map": "/chadLinthicum/APP-React-Expense_Report_Tracker/static/css/main.9dac445e.css.map",
+    "main.c1ccf1b2.js.map": "/chadLinthicum/APP-React-Expense_Report_Tracker/static/js/main.c1ccf1b2.js.map",
+    "787.28cb0dcd.chunk.js.map": "/chadLinthicum/APP-React-Expense_Report_Tracker/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9dac445e.css",
-    "static/js/main.f5398e8a.js"
+    "static/js/main.c1ccf1b2.js"
   ]
 }
