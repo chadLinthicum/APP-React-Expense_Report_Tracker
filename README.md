@@ -5,7 +5,9 @@
  <br>
  <b>Download: </b><a href="https://github.com/chadLinthicum/APP-React_Expense-Tracker">Here</a><br>
  <br>
- <b>Installation:</b> Create a new app using create-react-app. Download the repository and drag all items into your created app root.<br>
+ <b>Install</b>:
+  Clone the project down and run npm start.
+ <br>
  <br>
  <b>Logistics:</b><br> o React Library, JSX, HTML, and CSS. <br>
 o	Form data is capture by useState and stored in an array which is returned to a table using props.<br>
